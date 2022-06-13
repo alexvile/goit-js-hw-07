@@ -1,3 +1,7 @@
+
+
+
+
 import { galleryItems } from './gallery-items.js';
 // Change code below this line
 
@@ -42,7 +46,9 @@ function createPicturesMarkup(pictures) {
 function onGalleryClick(evt) {
     evt.preventDefault();
     
-  const isPictureEl = evt.target.classList.contains('gallery__image');
+    // const isPictureEl = evt.target.classList.contains('gallery__image');
+    const isPictureEl = evt.target.nodeName == 'IMG';
+   
 
   if (!isPictureEl) {
       return
