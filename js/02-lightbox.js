@@ -7,7 +7,7 @@ console.log(galleryItems);
 
 
 const gallery = document.querySelector('.gallery');
-const picturesMarkup =  createPicturesMarkup(galleryItems);
+const picturesMarkup = createPicturesMarkup(galleryItems);
 
 
 gallery.insertAdjacentHTML('beforeend', picturesMarkup);
@@ -15,9 +15,9 @@ gallery.insertAdjacentHTML('beforeend', picturesMarkup);
 
 
 function createPicturesMarkup(pictures) {
-  return pictures
-    .map(({ preview, original, description }) => {
-        return `
+    return pictures
+        .map(({ preview, original, description }) => {
+            return `
         <a class="gallery__item" href="${original}">
             <img
             class="gallery__image"
@@ -25,15 +25,15 @@ function createPicturesMarkup(pictures) {
             alt="${description}"
             />
         </a>`;
-    })
-    .join('');
+        })
+        .join('');
 }
 
-var lightbox = new SimpleLightbox('.gallery a', { captionsData: 'alt', captionDelay: 250 });
+let lightbox = new SimpleLightbox('.gallery a', { captionsData: 'alt', captionDelay: 250 });
 
 
 
-  
+
 
 
 
